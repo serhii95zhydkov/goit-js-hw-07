@@ -8,6 +8,7 @@ const modal = (modalImageSrc) => {
   const onEscapePress = (event) => {
     if (event.code === "Escape") {
       instance.close();
+      window.removeEventListener("keydown", onEscapePress);
   };
   };
 
